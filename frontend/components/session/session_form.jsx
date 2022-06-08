@@ -18,6 +18,7 @@ const SessionForm = ({processForm, receiveErrors, clearErrors, formType, errors}
     const handleSubmit = e => {
         e.preventDefault();
         // this.props.processForm(userData);
+        console.log("submit button pressed");
     }
 
     return (
