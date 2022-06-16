@@ -17,10 +17,15 @@ const LogInSignUpPage = () => {
     const form = visibleForm === "login" ? <LoginFormContainer/> : <SignupFormContainer/>;
 
     return (
-        <div>
-            {form}
-            <button onClick={loginClicked}>Login</button>
-            <button onClick={signupClicked}>Signup</button>
+        <div className="login-signup-page">
+            <div className="login-signup-page-left">
+
+            </div>
+            <div className="login-signup-page-right">
+                {form}
+                <button onClick={loginClicked}>Login</button>
+                <button onClick={signupClicked}>Signup</button>
+            </div>
         </div>
     );
 }

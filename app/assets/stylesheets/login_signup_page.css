@@ -1,0 +1,12 @@
+.login-signup-page {
+    display: grid;
+    grid-template-columns: 50%;
+}
+.login-signup-page-left {
+    grid-column: 1;
+    background-color: yellow;
+}
+.login-signup-page-right {
+    grid-column: 2;
+    background-color: green;
+}
