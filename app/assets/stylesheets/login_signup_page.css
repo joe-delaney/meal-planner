@@ -6,6 +6,8 @@
 .login-signup-page-left {
     grid-column: 1;
     background-color: #890F0D;
+    display: flex;
+    justify-content: center;
 }
 .login-signup-page-right {
     grid-column: 2;
@@ -41,4 +43,15 @@
     margin-left: 40px;
     padding-bottom: 0px;
     margin-bottom: 0px;
+}
+
+.about-meal-planner {
+    padding: 100px;
+    color: white;
+    width: 70%;
+}
+
+.app-description {
+    font-size: 20px;
+    line-height: 50px;
 }

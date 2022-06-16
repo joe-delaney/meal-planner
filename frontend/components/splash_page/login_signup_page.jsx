@@ -22,7 +22,10 @@ const LogInSignUpPage = () => {
     return (
         <div className="login-signup-page">
             <div className="login-signup-page-left">
-
+                <div className="about-meal-planner">
+                    <h1>What is Meal Planner?</h1>
+                    <p className="app-description">Have you ever struggled to decide what to eat? Do you agonize over what groceries to get each week? Do you ever eat the same meal multiple nights in a row? If any of these sound familiar, don't worry because Meal Planner exists to make your weekly eating and cooking decisions easier!</p>
+                </div>
             </div>
             <div className="login-signup-page-right">
                 <div className="session-form-container">
