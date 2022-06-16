@@ -12,7 +12,6 @@ const TopNavBar = ({currentUser, logout}) => {
 
     const navJustify = !currentUser ? "logged-out-justify" : "";
 
-
     return (
         <div className={`top-nav-bar ${navJustify}`}>
             {userName}

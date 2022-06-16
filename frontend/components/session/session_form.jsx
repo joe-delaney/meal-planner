@@ -48,7 +48,7 @@ const SessionForm = ({processForm, receiveErrors, clearErrors, formType, errors}
                     onChange={handleInput("email")}
                 />
                 <input
-                    type="text"
+                    type="password"
                     value={password}
                     onChange={handleInput("password")}
                 />
