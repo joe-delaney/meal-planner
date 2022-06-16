@@ -1,34 +1,22 @@
-import LoginFormContainer from "../session/login_form_container";
-import SignupFormContainer from "../session/signup_form_container";
+import LogInSignUpPage from "./login_signup_page";
 import React from "react";
-import { useState } from "react";
+import TopNavBar from "./top_nav_bar";
 
 const SplashPage = ({logout, currentUser}) => {
-    const [visibleForm, changeForm] = useState("login")
-
-    const loginClicked = e => {
-        changeForm("login");
-    }
-
-    const signupClicked = e => {
-        changeForm("signup");
-    }
-
-    const form = visibleForm === "login" ? <LoginFormContainer/> : <SignupFormContainer/>;
 
     const display = currentUser ? (
-        <div>
-            <button onClick={logout}>Logout</button>
-        </div>
-    ) : (
-        <div>
-            {form}
-            <button onClick={loginClicked}>Login</button>
-            <button onClick={signupClicked}>Signup</button>
-        </div>
-    )
+        null
+    ) : <LogInSignUpPage/>
 
-    return display;
+    return (
+        <div>
+            <TopNavBar
+                currentUser={currentUser}
+                logout={logout}
+            />
+            {display}
+        </div>
+    );
 }
 
 export default SplashPage;
