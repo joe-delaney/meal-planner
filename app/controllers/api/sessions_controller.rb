@@ -4,6 +4,7 @@ class Api::SessionsController < ApplicationController
 
     def create 
         @user = User.find_by_credentials(params[:user][:email], params[:user][:password])
+        puts params
         if @user.nil?
             if params[:user][:email] == ""
                 render json: ['Please fill in your email'], status: 401

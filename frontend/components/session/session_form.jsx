@@ -4,22 +4,40 @@ import { useState } from "react";
 const SessionForm = ({processForm, receiveErrors, clearErrors, formType, errors}) => {
     const [userData, setUserData] = useState({
         email: "",
-        password: ""
+        password: "",
+        fname: "",
+        lname: ""
     })
 
-    const {email, password} = userData;
+    const {email, password, fname, lname} = userData;
 
     const handleInput = type => e => {
-        setUserData({
+        setUserData(params => ({
+            ...params,
             [type]: e.target.value
-        })
+        }))
     }
 
     const handleSubmit = e => {
         e.preventDefault();
-        // this.props.processForm(userData);
-        console.log("submit button pressed");
+        console.log(userData);
+        processForm(userData);
     }
+
+    let signupInputs = formType === "login" ? null : (
+        <diV>
+            <input 
+                type="text"
+                value={fname}
+                onChange={handleInput("fname")}
+            />
+            <input
+                type="text"
+                value={lname}
+                onChange={handleInput("lname")}
+            />
+        </diV>
+    )
 
     return (
         <div>
@@ -34,6 +52,7 @@ const SessionForm = ({processForm, receiveErrors, clearErrors, formType, errors}
                     value={password}
                     onChange={handleInput("password")}
                 />
+                {signupInputs}
                 <input type="submit" value={formType}/>
             </form>
         </div>
