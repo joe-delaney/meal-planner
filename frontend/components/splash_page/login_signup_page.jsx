@@ -15,6 +15,9 @@ const LogInSignUpPage = () => {
     }
 
     const form = visibleForm === "login" ? <LoginFormContainer/> : <SignupFormContainer/>;
+    const loginSelected = visibleForm === "login" ? "selected-option" : "";
+    const signupSelected = visibleForm === "signup" ? "selected-option" : "";
+    const sessionHeader = visibleForm === "login" ? "Log into your account" : "Sign up for a new account"
 
     return (
         <div className="login-signup-page">
@@ -22,9 +25,14 @@ const LogInSignUpPage = () => {
 
             </div>
             <div className="login-signup-page-right">
-                {form}
-                <button onClick={loginClicked}>Login</button>
-                <button onClick={signupClicked}>Signup</button>
+                <div className="session-form-container">
+                    <div className="form-options">
+                        <span className={`form-option ${loginSelected}`} onClick={loginClicked}>Login</span>
+                        <span className={`form-option ${signupSelected}`} onClick={signupClicked}>Signup</span>
+                    </div>
+                    <h2 className="session-header">{sessionHeader}</h2>
+                    {form}
+                </div>
             </div>
         </div>
     );

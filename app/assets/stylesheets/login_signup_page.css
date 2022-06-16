@@ -1,12 +1,44 @@
 .login-signup-page {
     display: grid;
     grid-template-columns: 50%;
+    height: 100vh;
 }
 .login-signup-page-left {
     grid-column: 1;
-    background-color: yellow;
+    background-color: #890F0D;
 }
 .login-signup-page-right {
     grid-column: 2;
-    background-color: green;
+    background-color: #890F0D;
+}
+
+.session-form-container {
+    width: 500px;
+    background-color: #E83A14;
+    border-radius: 10px;
+    margin-top: 100px;
+}
+
+.form-options {
+    display: flex;
+    padding-left: 20px;
+    padding-top: 20px;
+    margin-left: 20px;
+}
+
+.form-option {
+    margin-right: 20px;
+    cursor: pointer;
+    color: white;
+}
+
+.selected-option {
+    font-weight: bold;
+}
+
+.session-header {
+    color: white;
+    margin-left: 40px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
 }

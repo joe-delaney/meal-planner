@@ -1,0 +1,32 @@
+.session-form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.session-input {
+    margin: 20px;
+    width: 400px;
+    height: 26px;
+    border-radius: 8px;
+    border: none;
+}
+
+.session-input:focus, .session-input:focus-visible {
+    /* border: 2px solid #630606; */
+    outline: none;
+}
+
+.button {
+    border-radius: 8px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+.session-button {
+    text-transform: capitalize;
+    width: 400px;
+    margin: 20px;
+    height: 26px;
+}

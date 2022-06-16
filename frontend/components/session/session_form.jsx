@@ -25,35 +25,42 @@ const SessionForm = ({processForm, receiveErrors, clearErrors, formType, errors}
     }
 
     let signupInputs = formType === "login" ? null : (
-        <diV>
+        <>
             <input 
                 type="text"
                 value={fname}
                 onChange={handleInput("fname")}
+                className="session-input"
             />
             <input
                 type="text"
                 value={lname}
                 onChange={handleInput("lname")}
+                className="session-input"
             />
-        </diV>
+        </>
     )
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
+            <form className="session-form" onSubmit={handleSubmit}>
                 <input 
                     type="text"
                     value={email}
                     onChange={handleInput("email")}
+                    className="session-input"
                 />
                 <input
                     type="password"
                     value={password}
                     onChange={handleInput("password")}
+                    className="session-input"
                 />
                 {signupInputs}
-                <input type="submit" value={formType}/>
+                <input 
+                    type="submit" 
+                    value={formType}
+                    className="button session-button"/>
             </form>
         </div>
     )
